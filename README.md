@@ -2,6 +2,8 @@
 
 Autor: Marco Antonio Bustillos Quiroz (MarAntBQ) — https://marantbq.dev
 
+Licencia: MIT (ver [LICENSE](./LICENSE)).
+
 Dos skills de Claude Code para automatizar tu búsqueda de trabajo de punta a punta: armar un CV tailored y ATS-safe por cada vacante, y enviarlo por correo desde tu propio dominio.
 
 ## Qué incluye
