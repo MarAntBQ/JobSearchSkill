@@ -1,0 +1,81 @@
+<!-- Plantilla base — Autor: Marco Antonio Bustillos Quiroz (MarAntBQ) — https://marantbq.dev
+     Parte del skill "tailored-resume-ats". Copia este archivo por cada CV tailored,
+     reemplaza TODO lo que está entre [corchetes] con tus datos reales. -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<style>
+  @page { size: A4; margin: 9mm 14mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #1a1a1a; font-size: 9.3pt; line-height: 1.3; }
+  .name { text-align: center; font-size: 22pt; font-weight: 700; letter-spacing: .3px; }
+  .title { text-align: center; font-size: 10pt; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #333; margin-top: 2px; }
+  .contact { text-align: center; font-size: 8.7pt; color: #333; margin-top: 4px; }
+  .contact b { color: #1a1a1a; }
+  .langs { text-align: center; font-size: 8.7pt; color: #333; margin-top: 1px; }
+  .rule { border: none; border-top: 2px solid #1a1a1a; margin: 5px 0 6px; }
+  h2 { font-size: 9.8pt; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; border-bottom: 1.3px solid #1a1a1a; padding-bottom: 1.5px; margin: 5px 0 3.5px; }
+  .summary { text-align: justify; }
+  .skills { line-height: 1.34; }
+  .skills div { margin-bottom: 1.5px; }
+  .skills b { margin-right: 4px; }
+  .job { margin-bottom: 4px; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-head .company { font-weight: 700; }
+  .job-head .place { font-weight: 700; font-size: 8.6pt; }
+  .job-sub { display: flex; justify-content: space-between; align-items: baseline; font-style: italic; color: #333; font-size: 8.9pt; }
+  ul { margin: 2px 0 0 15px; }
+  li { margin-bottom: 2px; text-align: justify; }
+  .edu-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .edu-head .deg { font-weight: 700; }
+  .edu-head .place { font-weight: 700; font-size: 9pt; }
+  .edu-sub { display: flex; justify-content: space-between; font-style: italic; color: #333; font-size: 9.3pt; }
+  .certs { font-size: 8.7pt; color: #333; margin-top: 3px; }
+</style>
+</head>
+<body>
+  <div class="name">[Tu Nombre Completo]</div>
+  <div class="title">[Título del puesto de la vacante]</div>
+  <div class="contact"><b>[tu@correo.com]</b> &nbsp;|&nbsp; [tusitio.com] &nbsp;|&nbsp; [Ciudad, País] &nbsp;|&nbsp; [+xxx xx xxx xxxx] &nbsp;|&nbsp; GitHub.com/[usuario] &nbsp;|&nbsp; LinkedIn.com/in/[usuario]</div>
+  <div class="langs">[Idioma nativo] &nbsp;·&nbsp; [Idioma 2 — nivel real, con el examen/certificado que lo respalda]</div>
+  <hr class="rule" />
+
+  <p class="summary">[4-7 líneas: quién eres, tu ángulo ganador para ESTA vacante específica, y — si aplica — el hueco honesto declarado con una frase corta, no una disculpa larga.]</p>
+
+  <h2>Habilidades</h2>
+  <div class="skills">
+    <div><b>[Categoría 1]:</b> [tecnologías/skills reales separadas por · ]</div>
+    <div><b>[Categoría 2]:</b> [tecnologías/skills reales separadas por · ]</div>
+    <div><b>[Categoría 3]:</b> [tecnologías/skills reales separadas por · ]</div>
+    <div><b>Huecos honestos:</b> [solo si aplica — lo que la vacante pide y no tienes, en una línea corta]</div>
+  </div>
+
+  <h2>Experiencia Laboral</h2>
+
+  <div class="job">
+    <div class="job-head"><span class="company">[Empresa]</span><span class="place">[Ciudad/Remoto]</span></div>
+    <div class="job-sub"><span>[Tu puesto]</span><span>[Mes Año – Mes Año / Actualidad]</span></div>
+    <ul>
+      <li>[Bullet real, con verbo y alcance exactos como en tu Resume.md]
+      <li>[Bullet real]
+      <li>[Bullet real]
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="company">[Empresa anterior]</span><span class="place">[Ciudad/Remoto]</span></div>
+    <div class="job-sub"><span>[Tu puesto]</span><span>[Mes Año – Mes Año]</span></div>
+    <ul>
+      <li>[Bullet real]
+    </ul>
+  </div>
+
+  <div class="certs" style="margin-top: 4px;"><b>Experiencia Adicional:</b> [Puesto, Empresa (años) · Puesto, Empresa (años)] — si tienes más empresas de las que caben como entradas completas.</div>
+
+  <h2>Educación</h2>
+  <div class="edu-head"><span class="deg">[Título]</span><span class="place">[País]</span></div>
+  <div class="edu-sub"><span>[Institución]</span><span>[Mes Año]</span></div>
+  <div class="certs">[Certificaciones relevantes, lista corta o link a tu perfil completo]</div>
+</body>
+</html>
