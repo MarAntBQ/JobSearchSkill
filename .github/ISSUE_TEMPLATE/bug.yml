@@ -1,74 +1,67 @@
-name: Bug
-description: Reporta un defecto reproducible o una regresión.
-title: ""
+name: Reporte de bug
+description: Reportar un defecto o regresión reproducible.
+title: "[Bug]: "
 labels:
   - bug
 body:
   - type: markdown
     attributes:
       value: |
-        Si no se puede reproducir, no es un bug todavía: es una sospecha. Documenta los pasos.
-  - type: input
-    id: tarjeta
-    attributes:
-      label: Tarjeta de Trello
-      placeholder: https://trello.com/c/...
+        **No incluyas** secretos, tokens, credenciales, cadenas de conexión, datos de clientes ni PII.
+        Flujo (repo autogestionado, Marco es el dueño): **Tarjeta (Trello personal) → este Issue → rama → PR → revisión/QA (Codex) → squash.**
   - type: textarea
-    id: resumen
+    id: summary
     attributes:
       label: Resumen
-      description: Qué está mal, en una o dos frases.
+      description: ¿Qué está roto y a quién/qué afecta?
     validations:
       required: true
   - type: input
-    id: superficie
+    id: surface
     attributes:
-      label: Dónde ocurre
-      description: Sitio, ruta, módulo o endpoint afectado.
-      placeholder: módulo, pantalla, endpoint o script afectado
+      label: Módulo / superficie afectada
+      placeholder: "web, admin, api, deploy, docs, configuración…"
     validations:
       required: true
   - type: textarea
-    id: reproduccion
+    id: reproduction
     attributes:
       label: Reproducción
-      description: Pasos exactos. Incluye navegador y si fue en escritorio o móvil.
+      description: La secuencia mínima y confiable, incluyendo el entorno (prod/local, rol/usuario).
       placeholder: |
-        1. Entrar a ...
-        2. Hacer clic en ...
-        3. Observar que ...
+        1. En <entorno/URL> como <rol/usuario>
+        2. Hacer ...
+        3. Observar ...
     validations:
       required: true
   - type: textarea
-    id: esperado
+    id: expected
     attributes:
       label: Comportamiento esperado
     validations:
       required: true
   - type: textarea
-    id: real
+    id: actual
     attributes:
-      label: Comportamiento real y evidencia
-      description: Captura, error de consola, log o respuesta del servidor. La evidencia vale más que la descripción.
+      label: Comportamiento actual + evidencia
+      description: Capturas seguras, logs, IDs de request o enlaces cuando existan.
     validations:
       required: true
   - type: dropdown
-    id: impacto
+    id: impact
     attributes:
       label: Impacto
       options:
-        - Producción caída o riesgo de datos
-        - Degradación visible para el usuario
-        - Defecto interno o solo en desarrollo
+        - Bloqueante de producción o riesgo (dinero/SRI/datos)
+        - Degradación visible al usuario
+        - Interno / solo preview
+        - Desconocido
     validations:
       required: true
-  - type: dropdown
-    id: entorno
+  - type: textarea
+    id: acceptance
     attributes:
-      label: Entorno
-      options:
-        - Producción
-        - Local / desarrollo
-        - Ambos
+      label: Criterios de aceptación y verificación
+      description: Qué debe ser verdad, y qué evidencia probará el fix (tsc/tests/curl/click).
     validations:
       required: true

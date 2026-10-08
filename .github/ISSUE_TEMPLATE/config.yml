@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Cómo se trabaja en este repo (flujo de contribución)
+    url: ../../blob/main/CONTRIBUTING.md
+    about: Cómo se abren issues, cómo se envían PRs y cómo entra un cambio a la rama base.

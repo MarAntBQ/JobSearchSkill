@@ -39,7 +39,7 @@ Este archivo es para **todas las personas y agentes de IA** que trabajan en el J
 
 ## Skills
 
-Es un repo **autogestionado**: se usan las skills del **directorio oficial** (`MarbustTechnologyCompany/ClaudeSkills`, en `~/.claude/skills`). No se sincroniza una copia en `.claude/skills/` aquí (además, las skills que **contiene** este repo son su propio producto, no una copia del directorio oficial).
+Es un repo **autogestionado**: se usan las skills del **directorio oficial** (`MarbustTechnologyCompany/ClaudeSkills`, en `~/.claude/skills`). No se sincronizan skills dentro de este repo (además, las skills que **contiene** este repo son su propio producto, no una copia del directorio oficial).
 
 | Skill | Cuándo |
 |---|---|
