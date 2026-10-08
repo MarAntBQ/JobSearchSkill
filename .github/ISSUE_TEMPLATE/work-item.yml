@@ -1,5 +1,5 @@
-name: Tarea
-description: Propone un resultado revisable de forma independiente (producto, ingeniería o documentación).
+name: Work item (tarea / feature)
+description: Un único resultado revisable de producto, ingeniería o documentación.
 title: ""
 labels:
   - enhancement
@@ -7,53 +7,45 @@ body:
   - type: markdown
     attributes:
       value: |
-        Un issue = **un resultado**. Si algo puede aceptarse y desplegarse por separado, va en otro issue.
-  - type: input
-    id: tarjeta
+        Mantén **un solo resultado**. Divide el trabajo que se pueda aceptar y desplegar por separado.
+        Flujo (repo autogestionado, Marco es el dueño): **Tarjeta (Trello personal) → este Issue → rama → PR → revisión/QA (Codex) → squash.**
+  - type: textarea
+    id: outcome
     attributes:
-      label: Tarjeta de Trello
-      description: Enlace a la tarjeta del tablero. Toda tarea nace ahí antes de existir aquí.
-      placeholder: https://trello.com/c/...
+      label: Resultado (outcome)
+      description: ¿Qué problema resolvemos, para quién, y qué cambia cuando esté completo?
     validations:
       required: true
   - type: textarea
-    id: resultado
-    attributes:
-      label: Resultado
-      description: Qué problema resuelve, para quién, y qué cambia cuando esté terminado.
-    validations:
-      required: true
-  - type: textarea
-    id: alcance
+    id: scope
     attributes:
       label: Alcance
-      description: Qué comportamiento o artefactos entran en este issue.
+      description: El comportamiento o los artefactos incluidos en este issue.
     validations:
       required: true
   - type: textarea
-    id: exclusiones
+    id: exclusions
     attributes:
       label: Exclusiones importantes
-      description: Trabajo cercano que este issue deliberadamente NO incluye. Evita que el alcance se expanda solo.
+      description: Trabajo cercano que este issue deliberadamente NO incluye.
   - type: textarea
-    id: aceptacion
+    id: acceptance
     attributes:
       label: Criterios de aceptación
-      description: Observables. Si no se puede comprobar mirando algo, no es un criterio.
       placeholder: |
         - [ ] Resultado observable uno
         - [ ] Resultado observable dos
     validations:
       required: true
   - type: textarea
-    id: verificacion
+    id: verification
     attributes:
       label: Verificación
-      description: Qué evidencia hace falta para cerrar esto — pruebas automáticas, navegador, flujo real, revisión en producción.
+      description: Evidencia automatizada, de navegador, operativa o externa requerida para cerrar el issue.
     validations:
       required: true
   - type: textarea
-    id: contexto
+    id: context
     attributes:
       label: Contexto y referencias
-      description: Enlaces a código, documentos, incidentes previos. No incluir credenciales ni datos personales.
+      description: Enlaza código, docs, contratos, incidentes y la tarjeta de Trello. Sin secretos ni PII.

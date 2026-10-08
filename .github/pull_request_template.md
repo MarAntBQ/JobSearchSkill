@@ -2,6 +2,13 @@
 
 <!-- Qué cambió y por qué. -->
 
+## Novedad
+
+<!-- Repo INTERNO: no publica novedades al exterior. Solo la línea interna; "ninguna" si no aplica.
+No pongas líneas "pública" ni "hito" (el check "Checks del PR" las rechaza en un repo interno). -->
+
+- interna:
+
 ## Issue enlazado
 
 <!-- `Closes #123` si este PR completa el issue, o `Refs #123` si no lo cierra. -->
@@ -29,4 +36,4 @@
 
 ---
 
-> Este PR entra a la rama base por **squash**. Un issue, un PR, un commit.
+> Este PR entra a la rama base por **squash**. Un issue, un PR, un commit. Sin co-autoría de IA en commits ni en PRs.
