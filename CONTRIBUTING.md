@@ -42,16 +42,38 @@ commit en el historial. La rama se borra al mezclar.
 
 El historial de la rama base debe poder leerse como la lista de lo que se entregó, no como el
 diario de cómo se llegó. Los quince commits de "wip", "arreglo", "ahora sí" son útiles mientras
-trabajas y ruido después. Squash los deja en uno solo, con el título del PR y el issue enlazado.
+trabajas y ruido después. Squash los deja en uno solo, con el título del PR, el resumen de lo que
+se hizo y el issue enlazado.
 
 ## Mensajes de commit
 
-Al hacer squash, el título del commit es el título del PR. Formato:
+Al hacer squash, el título del commit es el título del PR y el **cuerpo resume todo lo que se
+hizo**, en lista. Quien lee el historial no tiene que adivinar ni ir a abrir el issue: expande el
+commit y ahí está. Formato:
 
 ```
 feat(portafolio): agregar TJ Viajes VIP
 
+- Página del caso con galería y testimonio
+- Tarjeta en el portafolio y enlace desde la portada
+- Imágenes optimizadas en WebP
+
 Closes #123
+```
+
+El cuerpo que GitHub propone por defecto (los "wip", "arreglo" de cada commit) no sirve: se
+reescribe. Con `gh`:
+
+```sh
+# ejemplo: PR 48 que cierra el issue 123 — cambia los dos números por los tuyos
+gh pr merge 48 --squash --subject "feat(portafolio): agregar TJ Viajes VIP (#48)" --body "$(cat <<'EOF'
+- Página del caso con galería y testimonio
+- Tarjeta en el portafolio y enlace desde la portada
+- Imágenes optimizadas en WebP
+
+Closes #123
+EOF
+)"
 ```
 
 Tipos: `feat`, `fix`, `chore`, `docs`, `refactor`, `test`, `perf`.
